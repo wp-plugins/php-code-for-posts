@@ -629,6 +629,27 @@ if( ! class_exists("PHPPC") ){
 			</form>
 	<?php
 		   }
+
+		/*
+		* set variables into the _vars array
+		*
+		* @since 1.1
+		* @author The Missing Code
+		*/
+		function set_variable($key, $value) {
+			$this->_vars[$key] = $value;
+		}
+
+		/**
+		 * get variable from the _vars array
+		 *
+		 * @since 1.1
+		 * @author The Missing Code
+		**/
+		function get_variable($key) {
+			return $this->_vars[$key];
+		}
+
 	  }
 	// End of the class
 

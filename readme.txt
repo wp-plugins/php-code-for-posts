@@ -3,8 +3,8 @@ Contributors: the.missing.code
 Donate link:
 Tags: PHP, allow php, exec php, execute php, php shortcode, php in posts, use php, embed html
 Requires at least: 3.3.1
-Tested up to: 3.4.3
-Stable tag: 1.0
+Tested up to: 3.6
+Stable tag: 1.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,7 +52,8 @@ Simples!
 * No changes
 = 1.1 =
 * Added missing functionality for delete single snippet
-* Tested for WP 3.4.3
+* Tested for WP 3.6
+* Added class functions for getting and setting shared variables (get_variable and set_variable)
 
 == Upgrade Notice ==
 
@@ -60,7 +61,7 @@ Simples!
 * Nothing :)
 = 1.1 =
 * Added in missing functionality
-* Tested for WP 3.4.3
+* Tested for WP 3.6
 
 
 == Screenshots ==
