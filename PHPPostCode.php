@@ -245,8 +245,18 @@ if( ! class_exists("PHPPC") ){
 				$action = ( isset( $_GET["action"] ) ) ? $_GET["action"] : "";
 				$item = ( isset( $_GET["item"] ) ) ? $_GET["item"] : "";
 				$actioncode = ( isset( $_GET["actioncode"] ) ) ? $_GET["actioncode"] : "";
-
 				self::check_post_vars();
+
+				?>
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="donate">
+					<h3>Support The Plugin</h3>
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="SFQZ3KDJ4LQBA">
+					<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+				</form>
+
+				<?php
 				if( $action == "add" ){
 					 self::snippet_new_form();
 				}

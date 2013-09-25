@@ -1,6 +1,6 @@
 === PHP Code for posts ===
 Contributors: the.missing.code
-Donate link:
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SFQZ3KDJ4LQBA
 Tags: PHP, allow php, exec php, execute php, php shortcode, php in posts, use php, embed html
 Requires at least: 3.3.1
 Tested up to: 3.6
