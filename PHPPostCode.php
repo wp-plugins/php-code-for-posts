@@ -2,7 +2,7 @@
 /*
 ** Plugin Name: PHP Code for posts
 ** Description: Insert and execute PHP code in WordPress content. This plugin also enabled shortcodes for text widgets.
-** Version: 1.1.1
+** Version: 1.1.2
 ** Author: The Missing Code
 */
 
@@ -52,7 +52,7 @@ if( ! class_exists("PHPPC") ){
 		* @param string $content String containing shortcode / PHP tags
 		* @return string eval'ed PHP result
 		*/
-		function handle_extra_shortcode( $content ){
+		static function handle_extra_shortcode( $content ){
 			$content = str_ireplace( "[php]", "<?php ", str_ireplace("[/php]", " ?>", $content) );
 			ob_start();
 			eval("?>".$content);

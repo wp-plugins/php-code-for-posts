@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: PHP, allow php, exec php, execute php, php shortcode, php in posts, use php, embed html
 Requires at least: 3.3.1
 Tested up to: 3.6
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,9 @@ The plugin also contains a variable array which you can add variables to for use
 
 = New for 1.1.1 =
 The plugin's shortcode can also accept parameters using the param attribute, the value should be a string of name=value pairs, separated by &s, for example `[php snippet=2 param="var1=val1&var2=val2"]`.  Within your snippet, the parameters are assigned a $_parameters array, for example `echo $_parameters["var1"]; //outputs "val1"`
+
+= Special Thanks =
+My special thanks go out to the following contributors: Vailou Gbr
 
 == Installation ==
 1. Download the plugin to your computer
@@ -59,6 +62,8 @@ Simples!
 * Added class functions for getting and setting shared variables (get_variable and set_variable)
 = 1.1.1 =
 * added parameters for snippits
+= 1.1.2 =
+* Fix for php warning handle_extra_shortcode (thanks to paul_martin)
 
 == Upgrade Notice ==
 
