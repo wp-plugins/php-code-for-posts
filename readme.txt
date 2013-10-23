@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: PHP, allow php, exec php, execute php, php shortcode, php in posts, use php, embed html
 Requires at least: 3.3.1
 Tested up to: 3.6
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -64,6 +64,9 @@ Simples!
 * added parameters for snippits
 = 1.1.2 =
 * Fix for php warning handle_extra_shortcode (thanks to paul_martin)
+= 1.1.3 =
+* Fix for the table not being created in a multi-site installation (thanks to dondela and mediagent)
+* Fix for the parameter variables not splitting correctly because of html entity encoding (thanks to eoh1)
 
 == Upgrade Notice ==
 
@@ -72,7 +75,9 @@ Simples!
 = 1.1 =
 * Added in missing functionality
 * Tested for WP 3.6
-
+= 1.1.3 =
+* Multisite Fix
+* Parameter Fix
 
 == Screenshots ==
 1. The plugin options menu

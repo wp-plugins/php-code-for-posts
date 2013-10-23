@@ -2,7 +2,7 @@
 /*
 ** Plugin Name: PHP Code for posts
 ** Description: Insert and execute PHP code in WordPress content. This plugin also enabled shortcodes for text widgets.
-** Version: 1.1.2
+** Version: 1.1.3
 ** Author: The Missing Code
 */
 
@@ -77,7 +77,8 @@ if( ! class_exists("PHPPC") ){
 				if( sizeof( $snippet )){
 					$snippetPrefix = '?>';
 					if ($param != ""){
-						$snippetPrefix = '$_parameters = array(); parse_str("'.$param.'", $_parameters);' . $snippetPrefix;
+						$snippetPrefix = '$_parameters = array(); parse_str(htmlspecialchars_decode("'.$param.'"), $_parameters);' . $snippetPrefix;
+						print_r( parse_str($param));
 					}
 					ob_start();
 					eval( $snippetPrefix.$snippet->code );
@@ -238,6 +239,7 @@ if( ! class_exists("PHPPC") ){
 		* @package WordPress
 		*/
 		function do_admin_menu(){
+			self::check_plugin_table_exists();
 			?>
 			 <div class='wrap'>
 				<h2>PHP Code for Posts and Pages</h2>
@@ -252,7 +254,7 @@ if( ! class_exists("PHPPC") ){
 					<h3>Support The Plugin</h3>
 					<input type="hidden" name="cmd" value="_s-xclick">
 					<input type="hidden" name="hosted_button_id" value="SFQZ3KDJ4LQBA">
-					<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+					<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal â€“ The safer, easier way to pay online.">
 					<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 				</form>
 
@@ -664,6 +666,20 @@ if( ! class_exists("PHPPC") ){
 			return $this->_vars[$key];
 		}
 
+		/**
+		 * checks if the table exists for the plugin, if it doesn't, create it
+		 *
+		 * @since 1.1.3
+		 * @author The Missing Code
+		 */
+		private static function check_plugin_table_exists() {
+			global $wpdb;
+			$result = $wpdb->get_results("SHOW TABLES LIKE '". $wpdb->prefix . self::$plugin_table_name . "'");
+			if (empty($result)) {
+				echo '<div class="error"><p><strong>The plugin could not find the required table. Attempting to recreate the table. If you continue to get this message, seek support.</strong></p></div>';
+				self::upgrade_table();
+			}
+		}
 	  }
 	// End of the class
 
