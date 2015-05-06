@@ -3,8 +3,8 @@ Contributors: the.missing.code
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SFQZ3KDJ4LQBA
 Tags: PHP, allow php, exec php, execute php, php shortcode, php in posts, use php, embed html
 Requires at least: 3.3.1
-Tested up to: 3.8.1
-Stable tag: 1.2.0
+Tested up to: 4.2.1
+Stable tag: 1.3.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,9 +27,6 @@ The plugin's shortcode can also accept parameters using the param attribute, the
 
 = New for 1.2.0 =
 The plugin's snippet editor now has better formatting, and supports AJAX saving for snippet updates (request by eneasgesing)
-
-= Special Thanks =
-My special thanks go out to the following contributors: Vailou Gbr
 
 == Installation ==
 1. Download the plugin to your computer
@@ -81,6 +78,8 @@ One common error is an error in the eval'ed code, this is more down to a syntax 
 = 1.2.0 =
 * Ajax saving for updating code snippets (ajax save for initial add still to be implemented) (request by eneasgesing)
 * Richer snippet editor using Codemirror (request by eneasgesing)
+= 1.3.0 =
+* Confirmed support for latest version of WP (4.2.1) just in case you were wondering
 
 == Upgrade Notice ==
 

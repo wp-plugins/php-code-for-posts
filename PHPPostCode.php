@@ -2,7 +2,7 @@
 /*
 ** Plugin Name: PHP Code for posts
 ** Description: Insert and execute PHP code in WordPress content. This plugin also enabled shortcodes for text widgets.
-** Version: 1.2.0
+** Version: 1.3.0
 ** Author: The Missing Code
 */
 
@@ -510,7 +510,7 @@ if( ! class_exists("PHPPC") ){
 				</table>
 			</form>
 			<?php
-		
+
 			if ($option['enable_richeditor'] == 1) {
 				?>
 				<script>
@@ -611,7 +611,7 @@ if( ! class_exists("PHPPC") ){
 				</table>
 			</form>
 			<?php
-			
+
 			if ($option['enable_richeditor'] == 1) {
 				?>
 				<script>
@@ -780,7 +780,7 @@ if( ! class_exists("PHPPC") ){
 					case "update":
 						$response = self::update_snippet( $post, true );
 						break;
-				endswitch;	
+				endswitch;
 			}
 			echo $response;
 			die;
