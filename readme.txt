@@ -14,6 +14,8 @@ Add PHP code to your WordPress posts, pages, custom post types and even sidebars
 
 PHP Code for posts allows you to add your own PHP code to posts, pages, custom post types (posts) and even sidebars without the need for custom templates
 
+[[ Have you got a feature request? Email Me! ]]
+
 The plugin enables a shortcode and options page so you can add your code to the admin options page and then output it in your post using shortcodes
 
 Multiple code snippets can be used on a post, and multiple posts can use the same code snippet, allowing you to re-use code.
